@@ -1,0 +1,16 @@
+{
+  "name": "pokemon-app-lib",
+  "version": "1.0.0",
+  "description": "A lib made to fetch and know more about your favorite pokemon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "lib",
+    "pokemon"
+  ],
+  "author": "Gabriel Santos",
+  "license": "MIT"
+}

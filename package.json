@@ -2,7 +2,7 @@
   "name": "pokemon-app-lib",
   "version": "1.0.0",
   "description": "A lib made to fetch and know more about your favorite pokemon",
-  "main": "index.js",
+  "main": "source/index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
     "test:watch": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch"

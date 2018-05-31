@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PokeApp Library Example</title>
+</head>
+<body>
+  <h1 id="pokemonName">Your pokemon name will appear here!</h1>
+
+<script type="text/javascript" src="../dist/pokemon-app-lib.umd.min.js"></script>
+<script type="text/javascript">
+  
+  let container = document.getElementById('pokemonName');
+  let calledPokemon = pokemonAppLib.searchByName('charizard');
+
+  calledPokemon
+    .then(data => container.innerHTML = data.name);
+
+</script>
+</body>
+</html>

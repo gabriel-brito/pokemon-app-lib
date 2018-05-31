@@ -65,3 +65,9 @@ typings/
 
 # Serverless directories
 .serverless
+
+#dist
+dist
+
+#library
+library

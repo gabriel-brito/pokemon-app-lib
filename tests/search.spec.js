@@ -46,11 +46,11 @@ describe('Search', () => {
     it('should call fetch function with the correct URL', () => {
       const pokemon = searchByName('bulbasaur');
       expect(fetchedStub).to.have.been
-        .calledWith('http://pokeapi.co/api/v2/pokemon/bulbasaur');
+        .calledWith('https://pokeapi.co/api/v2/pokemon/bulbasaur');
 
       const pokemon2 = searchByName('squirtle');
       expect(fetchedStub).to.have.been
-        .calledWith('http://pokeapi.co/api/v2/pokemon/squirtle')
+        .calledWith('https://pokeapi.co/api/v2/pokemon/squirtle');
     });
 
     it('should return an promise with JSON data', () => {
@@ -71,11 +71,11 @@ describe('Search', () => {
     it('should call fetch function with the correct URL', () => {
       const type = searchByType('grass');
       expect(fetchedStub).to.have.been
-        .calledWith('http://pokeapi.co/api/v2/type/grass');
+        .calledWith('https://pokeapi.co/api/v2/type/grass');
 
       const type2 = searchByType('water');
       expect(fetchedStub).to.have.been
-        .calledWith('http://pokeapi.co/api/v2/type/water')
+        .calledWith('https://pokeapi.co/api/v2/type/water');
     });
 
     it('should return an promise with JSON data', () => {
@@ -96,11 +96,11 @@ describe('Search', () => {
     it('should call fetch function with the correct URL', () => {
       const ability = searchByAbility('serene-grace');
       expect(fetchedStub).to.have.been
-        .calledWith('http://pokeapi.co/api/v2/ability/serene-grace');
+        .calledWith('https://pokeapi.co/api/v2/ability/serene-grace');
 
       const ability2 = searchByAbility('stench');
       expect(fetchedStub).to.have.been
-        .calledWith('http://pokeapi.co/api/v2/ability/stench')
+        .calledWith('https://pokeapi.co/api/v2/ability/stench');
     });
 
     it('should return an promise with JSON data', () => {

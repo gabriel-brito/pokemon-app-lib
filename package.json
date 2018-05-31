@@ -4,8 +4,15 @@
   "description": "A lib made to fetch and know more about your favorite pokemon",
   "main": "source/index.js",
   "scripts": {
+    "clean": "rimraf library",
+    "build": "npm run clean && ./node_modules/.bin/babel --out-dir library source",
+    "build:watch": "npm run build -- --watch",
+    "build:umd": "./node_modules/.bin/webpack --output-filename pokemon-app-lib.umd.js",
+    "build:umd:min": "./node_modules/.bin/webpack --output-filename pokemon-app-lib.umd.min.js -p",
+    "build:production": "npm run build && npm run build:umd && npm run build:umd:min",
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
-    "test:watch": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch"
+    "test:watch": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
+    "test:coverage": "nyc npm test"
   },
   "keywords": [
     "js",
@@ -17,15 +24,20 @@
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
     "mocha": "^5.2.0",
     "node-fetch": "^2.1.2",
     "nyc": "^11.8.0",
+    "path": "^0.12.7",
     "rimraf": "^2.6.2",
     "sinon": "^4.5.0",
     "sinon-chai": "^3.1.0",
-    "sinon-stub-promise": "^4.0.0"
+    "sinon-stub-promise": "^4.0.0",
+    "source-map": "^0.7.3",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^2.1.4"
   }
 }

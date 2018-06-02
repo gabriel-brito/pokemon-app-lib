@@ -1,10 +1,10 @@
 {
   "name": "pokemon-app-lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lib made to fetch and know more about your favorite pokemon",
-  "main": "source/index.js",
+  "main": "library/index.js",
   "scripts": {
-    "clean": "rimraf library",
+    "clean": "rimraf library dist",
     "build": "npm run clean && ./node_modules/.bin/babel --out-dir library source",
     "build:watch": "npm run build -- --watch",
     "build:umd": "./node_modules/.bin/webpack --output-filename pokemon-app-lib.umd.js",
@@ -15,6 +15,10 @@
     "test:coverage": "nyc npm test",
     "coveralls": "npm run test:coverage && nyc report --reporter=text-lcov | coveralls"
   },
+  "files": [
+    "dist",
+    "library"
+  ],
   "keywords": [
     "js",
     "lib",

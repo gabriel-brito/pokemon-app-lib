@@ -1,4 +1,5 @@
 import { join } from 'path';
+import webpack from 'webpack';
 
 let es6Promise = require('es6-promise');
 es6Promise.polyfill();

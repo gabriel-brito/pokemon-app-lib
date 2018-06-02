@@ -1,5 +1,7 @@
 import { join } from 'path';
 
+let es6Promise = require('es6-promise');
+es6Promise.polyfill();
 const include = join(__dirname, 'source');
 
 export default {
@@ -10,6 +12,11 @@ export default {
     library: 'pokemonAppLib',
   },
   devtool: 'source-map',
+  plugins: [
+    new webpack.ProvidePlugin({
+      Promise: 'es6-promise-promise',
+    }),
+  ],
   module: {
     rules: [
       {

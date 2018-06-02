@@ -1,5 +1,5 @@
 {
-  "name": "pokemonAppLib",
+  "name": "pokemon-app-lib",
   "version": "1.0.0",
   "description": "A lib made to fetch and know more about your favorite pokemon",
   "main": "source/index.js",

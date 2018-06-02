@@ -10,4 +10,4 @@ before_script:
   - npm run build:production
 
 after_success:
-  - npm run test:coverage
+  - npm run coveralls
